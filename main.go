@@ -3,8 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"github.com/hbollon/go-edlib"	
-        "github.com/containerd/containerd"
+	"github.com/hbollon/go-edlib"
 	
 )
 
