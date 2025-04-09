@@ -1,6 +1,6 @@
 ARG REPO_URL
 
-# Stage 1: Build the Go application
+# Stage 1: Build the Go application12
 FROM ${REPO_URL}/golang:1.23.3-alpine AS builder
 
 # Set the working directory
