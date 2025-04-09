@@ -4,5 +4,4 @@ go 1.21
 
 require (
 github.com/hbollon/go-edlib v1.6.0
-github.com/containerd/containerd v1.8.0
 )
