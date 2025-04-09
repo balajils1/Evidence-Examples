@@ -51,7 +51,8 @@ jobs:
           docker build --build-arg REPO_URL=${REPO_URL} -f Dockerfile . \
           --tag ${REPO_URL}/example-project-app:${{ github.run_number }} \
           --output=type=image --platform linux/amd64 --metadata-file=build-metadata --push
-          jf rt build-docker-create --image-file build-metadata --build-name ${{ vars.BUILD_NAME }} --build-number ${{ github.run_number }}
+          cat build-metadata
+          jf rt build-docker-create shani-docker-dev-local --image-file build-metadata --build-name ${{ vars.BUILD_NAME }} --build-number ${{ github.run_number }}
 
       - name: Evidence on docker
         run: |
