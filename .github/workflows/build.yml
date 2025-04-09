@@ -22,8 +22,8 @@ jobs:
           JF_URL: https://${{ vars.JF_URL }}/
           #JF_PROJECT: ${{ vars.JF_PROJECT }}
         with:
-            oidc-provider-name: shani-frogbot-integration
-            oidc-audience: shani-audience
+            oidc-provider-name: balajils1
+            oidc-audience: balajils1
             version: latest
 
       - uses: actions/checkout@v4
