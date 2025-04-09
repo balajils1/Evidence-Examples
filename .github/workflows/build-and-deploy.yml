@@ -98,7 +98,7 @@ jobs:
           
       - name: Promote to QA
         run: |
-          jf release-bundle-promote ${{ vars.BUNDLE_NAME }} ${{ github.run_number }} QA --signing-key PGP-RSA-2048 --sync=true
+          jf release-bundle-promote ${{ vars.BUNDLE_NAME }} ${{ github.run_number }} QA --signing-key balajis-gpg --sync=true
           echo "🚀 Succesfully promote to \`QA\` environemnt" >> $GITHUB_STEP_SUMMARY
 
       - name: Evidence on release-bundle
@@ -150,7 +150,7 @@ jobs:
             jf evd create --key "${{ secrets.PRIVATE_KEY }}" --key-alias balajis \
               --release-bundle ${{ vars.BUNDLE_NAME }} --release-bundle-version ${{ github.run_number }} \
               --predicate ./policy.json --predicate-type https://jfrog.com/evidence/approval/v1
-            jf release-bundle-promote ${{ vars.BUNDLE_NAME }} ${{ github.run_number }} PROD --signing-key PGP-RSA-2048  --sync=true
+            jf release-bundle-promote ${{ vars.BUNDLE_NAME }} ${{ github.run_number }} PROD --signing-key balajis-gpg  --sync=true
             echo "🚀 Succesfully promote to \`PROD\` environemnt" >> $GITHUB_STEP_SUMMARY
           else
             echo "Fail promotion policy check" >> $GITHUB_STEP_SUMMARY
