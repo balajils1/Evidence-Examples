@@ -75,7 +75,9 @@ jobs:
       - name: Sign build evidence
         run: |
           echo '{ "actor": "${{ github.actor }}", "date": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'" }' > sign.json
-          jf evd create-evidence --build-name ${{ vars.BUILD_NAME }} --build-number ${{ github.run_number }} --predicate-type=https://jfrog.com/evidence/signature/v1 --predicate=./sign.json --key "${{ secrets.PRIVATE_KEY }}"
+          jf evd create --build-name=${{ vars.BUILD_NAME }} --build-number=${{ github.run_number }} \
+            --predicate ./sign.json --predicate-type https://jfrog.com/evidence/build-signature/v1 \
+            --key "${{ secrets.PRIVATE_KEY }}" 
           echo '🔎 Evidence attached: `build-signature` 🔏 ' >> $GITHUB_STEP_SUMMARY
 
       - name: Create release bundle
