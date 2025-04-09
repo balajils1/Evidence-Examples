@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"github.com/hbollon/go-edlib"	
-        "github.com/containerd/containerd/api"
+        "github.com/containerd/containerd"
 	
 )
 
