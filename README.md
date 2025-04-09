@@ -11,7 +11,7 @@ This document describes how to use the JFrog CLI to create different types of ev
 
 The following workflow is described:
 
-1. [Bootstrapping](#bootstrapping)  
+1. [Bootstrapping](#bootstrapping))  
    1. [Install JFrog CLI](#install-jfrog-cli)  
    2. [Log In to the Artifactory Docker Registry](#log-in-to-the-artifactory-docker-registry)  
 2. [Build the Docker Image](#build-the-docker-image)  
