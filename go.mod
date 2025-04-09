@@ -1,9 +1,9 @@
 module evidence-basic-example
 
-go 1.23.3
+go 1.21
+toolchain go1.23.7
 
 require (
-  github.com/hbollon/go-edlib v1.6.0
 	github.com/PuerkitoBio/goquery v1.8.1
 	github.com/avelino/slugify v0.0.0-20180501145920-855f152bd774
 	github.com/otiai10/copy v1.14.0
