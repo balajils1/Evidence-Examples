@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"github.com/hbollon/go-edlib"
+	"github.com/PuerkitoBio/goquery"
 )
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
